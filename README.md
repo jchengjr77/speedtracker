@@ -5,7 +5,9 @@ This is a simple CLI tool to run in the background.
 
 ## Requires
 
-Homebrew - https://brew.sh/
+Mac or Linux: Homebrew - https://brew.sh/
+
+(No windows support yet)
 
 ## Install
 
