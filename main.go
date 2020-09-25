@@ -64,12 +64,12 @@ func printData(db netData) {
     db.avgPing, db.avgDown, db.avgUp)
     fmt.Printf("\nMaximum Stats:\n")
     fmt.Printf("Ping: %fms\t%s\n", db.maxPing, db.timeMaxPing.String())
-    fmt.Printf("Download: %fms\t%s\n", db.maxDown, db.timeMaxDown.String())
-    fmt.Printf("Upload: %fms\t%s\n", db.maxUp, db.timeMaxUp.String())
+    fmt.Printf("Download: %f Mbit/s\t%s\n", db.maxDown, db.timeMaxDown.String())
+    fmt.Printf("Upload: %f Mbit/s\t%s\n", db.maxUp, db.timeMaxUp.String())
     fmt.Printf("\nMinimum Stats:\n")
     fmt.Printf("Ping: %fms\t%s\n", db.minPing, db.timeMinPing.String())
-    fmt.Printf("Download: %fms\t%s\n", db.minDown, db.timeMinDown.String())
-    fmt.Printf("Upload: %fms\t%s\n", db.minUp, db.timeMinUp.String())
+    fmt.Printf("Download: %f Mbit/s\t%s\n", db.minDown, db.timeMinDown.String())
+    fmt.Printf("Upload: %f Mbit/s\t%s\n", db.minUp, db.timeMinUp.String())
 }
 
 func parseData(data string) (ping, down, up float64) {
