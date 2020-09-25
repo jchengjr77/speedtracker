@@ -23,6 +23,9 @@ For default behavior (ping every 15 seconds):
 $ speedtracker
 ```
 
+#### NOTE: It takes around 10-30s to start up. Please be patient while starting...
+
+
 To modify ping intervals (seconds): 
 ```
 $ speedtracker --interval 60
