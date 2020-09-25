@@ -7,13 +7,14 @@ import (
 	"os"
 	"os/exec"
 	"os/signal"
+	"runtime"
 	"strconv"
 	"strings"
 	"syscall"
 	"time"
 
+	spinner "github.com/briandowns/spinner"
 	cli "github.com/urfave/cli/v2"
-    spinner "github.com/briandowns/spinner"
 )
 
 type netData struct {
@@ -45,10 +46,19 @@ func checkSpeedTestExists() bool {
     return true
 }
 
-func printData(db netData) {
-    cmd := exec.Command("clear")
+func runClear() {
+    var cmd *exec.Cmd
+    if runtime.GOOS == "windows" {
+        cmd = exec.Command("cmd", "/c", "cls")
+    } else {
+        cmd = exec.Command("clear")
+    }
     cmd.Stdout = os.Stdout
     cmd.Run()
+}
+
+func printData(db netData) {
+    runClear()
     fmt.Println("\n\nNetwork Data:")
     fmt.Printf("\nAvg Ping: %fms\tAvg Download: %fMbit/s\tAvg Upload: %fMbit/s\n",
     db.avgPing, db.avgDown, db.avgUp)
