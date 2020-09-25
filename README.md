@@ -11,10 +11,10 @@ Homebrew - https://brew.sh/
 
 Run:
 
-    ```bash
-    $ brew tap jchengjr77/homebrew-private https://github.com/jchengjr77/homebrew-private.git
-    $ brew install speedtracker
-    ```
+```bash
+$ brew tap jchengjr77/homebrew-private https://github.com/jchengjr77/homebrew-private.git
+$ brew install speedtracker
+```
 
 ## Usage
 
