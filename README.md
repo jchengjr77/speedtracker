@@ -13,5 +13,23 @@ Run:
 
     ```bash
     $ brew tap jchengjr77/homebrew-private https://github.com/jchengjr77/homebrew-private.git
-    $ brew install canaveral
+    $ brew install speedtracker
     ```
+
+## Usage
+
+For default behavior (ping every 15 seconds):
+```
+$ speedtracker
+```
+
+To modify ping intervals (seconds): 
+```
+$ speedtracker --interval 60
+```
+Personally, I run this in the background so I use a `600` second delay.
+
+For help:
+```
+$ speedtracker -h
+```
